@@ -2,32 +2,30 @@
 
 
 // declare variable -marks-
-let marks ;
+let marks;
 //create the grade generator function and use if...else if.        
 
 
 function studentGradeGenerator(marks){
     if (marks > 79 && marks <= 100){
-       return 'grade: A'
+       return "grade: A"
 
-    }
-    else if(marks > 60 && marks < 79){
-       return 'grade: B'
+    }else if(marks > 60 && marks < 79){
+       return "grade: B"
 
-    }
-     else if (marks > 50 && marks < 59 ) {
-       return 'grade: C'
-    } 
-    else if (marks > 40 && marks < 49) {
-        return 'grade : D' 
+    }else if (marks > 50 && marks < 59 ) {
+       return "grade: C"
 
+    } else if (marks > 40 && marks < 49) {
+        return "grade : D"
+
+     } else if(marks < 48 && marks > 0){
+      return "grade: E"
      }
-     else if(marks < 48 && marks > 0){
-      return 'grade: E'
-     }
+      
 }
 
-console.log(studentGradeGenerator())
+console.log(studentGradeGenerator(20))
 
 
 
@@ -49,7 +47,7 @@ function speedDetector(speed){
 
 }
 
-console.log(speedDetector());
+console.log(speedDetector(150));
 
 
 
@@ -120,13 +118,13 @@ console.log(speedDetector());
           else if  (gross > 80000 && gross <= 89999) {
               NHIF = (1500)
              }
-          else if (gross > 90000 && gross <= 99999) {
+          else if (gross > 90000 && grossSalary <= 99999) {
               NHIF = (1600) 
             }
           else if (gross >= 100000) {
-              NHIF = (1700)
+              NHIF = (1700)}    
       let netSalary = 'Net Salary:' + (gross - (NHIF + PAYE + NSSF ))
       return netSalary;
+  
   }
-  }
-          console.log(individualNetSalary());
+          console.log(individualNetSalary(5000, 6000));
